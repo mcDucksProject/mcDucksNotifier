@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.ParseMode;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
@@ -34,6 +35,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
     public void enviarMensaje(String texto) throws TelegramApiException {
         SendMessage message = new SendMessage();
         message.setText(texto);
+        message.setParseMode(ParseMode.MARKDOWN);
         message.setChatId("865967445");
         execute(message);
     }
