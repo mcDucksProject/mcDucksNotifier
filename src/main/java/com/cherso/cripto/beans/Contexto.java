@@ -2,18 +2,12 @@ package com.cherso.cripto.beans;
 
 import org.springframework.stereotype.Component;
 
-public class BeanContexto {
+@Component
+public class Contexto {
 
-    private String moneda;
-    private int tiempo;
-    private Double movimiento;
-
-    public BeanContexto(String moneda, int tiempo, Double movimiento) {
-        System.out.println("CONTROLADOR BEAN CONTEXTO");
-        this.moneda = moneda;
-        this.tiempo = tiempo;
-        this.movimiento = movimiento;
-    }
+    private String moneda = "BTC";
+    private int tiempo = 10;
+    private Double movimiento = 0.001;
 
     public String getMoneda() {
         return moneda;
@@ -37,11 +31,5 @@ public class BeanContexto {
 
     public void setMovimiento(Double movimiento) {
         this.movimiento = movimiento;
-    }
-
-
-    @Override
-    public String toString() {
-        return "" + moneda + ";" + tiempo + ";" + movimiento + ";";
     }
 }

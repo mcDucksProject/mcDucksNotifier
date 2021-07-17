@@ -2,8 +2,6 @@ package com.cherso.cripto.services;
 
 import com.cherso.cripto.beans.BeanContexto;
 import com.cherso.cripto.beans.BeanMoneda;
-import com.cherso.cripto.beans.HistorialMoneda;
-import com.cherso.cripto.beans.Respuesta;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,8 +11,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -83,46 +79,6 @@ public class NewHomeService {
         }
         rd.close();
         return resultado.toString();
-    }
-
-    public List<HistorialMoneda> procesarDatos(List<BeanMoneda> listaMonedas, List<HistorialMoneda> historial) {
-        List<HistorialMoneda> historialMonedas = new ArrayList<>();
-        if (historial == null) {
-            logger.info(" *** HISTORIAL VACIO, ESPERAR DATOS ***");
-
-            for (BeanMoneda moneda : listaMonedas) {
-                HistorialMoneda hm = new HistorialMoneda();
-                hm.setNombre(moneda.getSymbol());
-                hm.setPrecioActual(moneda.getPrice());
-                historialMonedas.add(hm);
-            }
-            return historialMonedas;
-
-        } else {
-            logger.info("*** SE ACTUALIZA HISTORIAL ***");
-            for (HistorialMoneda coinHistorial : historial) {
-                BeanMoneda bm = buscarMoneda(coinHistorial.getNombre(), listaMonedas);
-                String aux = coinHistorial.getPrecioActual();
-                coinHistorial.setPrecioActual(bm.getPrice());
-                coinHistorial.setPrecioAnterior(aux);
-                Double answer = ((Double.parseDouble(coinHistorial.getPrecioActual()) / Double.parseDouble(coinHistorial.getPrecioAnterior())) - 1);
-                BigDecimal formatNumber = new BigDecimal(answer);
-                formatNumber = formatNumber.setScale(5, RoundingMode.DOWN);
-                coinHistorial.setMovimiento(formatNumber.doubleValue());
-            }
-            return historial;
-        }
-    }
-
-    private BeanMoneda buscarMoneda(String nombre, List<BeanMoneda> listaMonedas) {
-
-        for (BeanMoneda bm : listaMonedas) {
-            if (bm.getSymbol().equals(nombre)) {
-                return bm;
-            }
-        }
-
-        return null;
     }
 
 }

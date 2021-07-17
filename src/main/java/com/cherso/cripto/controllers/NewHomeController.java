@@ -1,9 +1,6 @@
 package com.cherso.cripto.controllers;
 
-import com.cherso.cripto.beans.BeanContexto;
-import com.cherso.cripto.beans.BeanMoneda;
-import com.cherso.cripto.beans.HistorialMoneda;
-import com.cherso.cripto.beans.Respuesta;
+import com.cherso.cripto.beans.*;
 import com.cherso.cripto.services.NewHomeService;
 import com.cherso.cripto.services.TelegramBotService;
 import org.slf4j.Logger;
@@ -43,10 +40,12 @@ public class NewHomeController extends TelegramLongPollingBot {
     @Autowired
     private TelegramBotService TBS;
 
+    @Autowired
+    private BeanHistorial beanHistorial;
 
-    List<HistorialMoneda> historial = null;
+    @Autowired
+    Contexto contexto;
 
-    
     @EventListener(ApplicationReadyEvent.class)
     public void loop() throws IOException, TelegramApiException, InterruptedException {
 
@@ -59,13 +58,13 @@ public class NewHomeController extends TelegramLongPollingBot {
                 contexto = traerDatos();
                 List<BeanMoneda> listaMonedas = null;
 
-                logger.info("*** SE INICIA LOOP CON " + contexto.toString());
-
+                //Buscar cotizacion en binance
                 listaMonedas = hs.buscarDatos(contexto);
-                historial = hs.procesarDatos(listaMonedas, historial);
+                // Iniciar o actualizar el historial
+                beanHistorial.ingresarDatos(listaMonedas);
 
-                if (historial.get(0).getPrecioAnterior() != null) {
-                    for (HistorialMoneda x : historial) {
+                if (!beanHistorial.estaVacio()) {
+                    for (HistorialMoneda x : beanHistorial.getHistorial()) {
                         if (x.getMovimiento() > traerDatos().getMovimiento() && x.getMovimiento() > 0) {
                             TBS.enviarMensaje("> *" + x.getNombre() + "* - Movimiento: " + x.getMovimiento() + "%");
                             TBS.enviarMensaje("- - - - - - - - - - - ");
