@@ -2,14 +2,13 @@ package com.cherso.cripto.beans;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-//
-//@Component
-//@Scope("session")
+
 public class BeanContexto {
 
     private String moneda;
     private int tiempo;
     private Double movimiento;
+    private Long thread;
 
     public BeanContexto(String moneda, int tiempo, Double movimiento) {
         System.out.println("CONTROLADOR BEAN CONTEXTO");
@@ -18,8 +17,11 @@ public class BeanContexto {
         this.movimiento = movimiento;
     }
 
-    public BeanContexto() {
-
+    public BeanContexto(String moneda, int tiempo, Double movimiento, Long thread) {
+        this.moneda = moneda;
+        this.tiempo = tiempo;
+        this.movimiento = movimiento;
+        this.thread = thread;
     }
 
     public String getMoneda() {
@@ -46,8 +48,16 @@ public class BeanContexto {
         this.movimiento = movimiento;
     }
 
+    public Long getThread() {
+        return thread;
+    }
+
+    public void setThread(Long thread) {
+        this.thread = thread;
+    }
+
     @Override
     public String toString() {
-        return "" + moneda + ";" + tiempo + ";" + movimiento + ";;";
+        return "" + moneda + ";" + tiempo + ";" + movimiento + ";" + thread + ";";
     }
 }

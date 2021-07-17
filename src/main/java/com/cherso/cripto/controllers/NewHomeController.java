@@ -31,7 +31,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.cherso.cripto.CriptoApplication.restart;
 
 @Controller
 public class NewHomeController extends TelegramLongPollingBot {
@@ -44,65 +43,44 @@ public class NewHomeController extends TelegramLongPollingBot {
     @Autowired
     private TelegramBotService TBS;
 
+
     List<HistorialMoneda> historial = null;
 
+    
     @EventListener(ApplicationReadyEvent.class)
-    public void loop() throws IOException, TelegramApiException {
+    public void loop() throws IOException, TelegramApiException, InterruptedException {
+
         logger.info(("*** INICIO DEL LOOP ***"));
 
-        int minutos = traerDatos().getTiempo();
-
-
-//        botonesBot();
-        Timer timer = new Timer((60000 * minutos), ae -> {
-//        Timer timer = new Timer((1000), ae -> {
-
-            BeanContexto contexto = null;
+        Timer timer = new Timer((60000 * traerDatos().getTiempo()), ae -> {
 
             try {
+                BeanContexto contexto = null;
                 contexto = traerDatos();
-            } catch (IOException e) {
-                logger.info("Error al traer los datos");
-            }
+                List<BeanMoneda> listaMonedas = null;
 
-            // Busco Datos en Binance
-            List<BeanMoneda> listaMonedas = null;
+                logger.info("*** SE INICIA LOOP CON " + contexto.toString());
 
-
-            try {
-                logger.info("arranco con " + contexto.getMoneda());
                 listaMonedas = hs.buscarDatos(contexto);
-
-
                 historial = hs.procesarDatos(listaMonedas, historial);
 
                 if (historial.get(0).getPrecioAnterior() != null) {
-
-                    Double mov = traerDatos().getMovimiento();
-
                     for (HistorialMoneda x : historial) {
-                        if (x.getMovimiento() > mov) {
-                            try {
-                                TBS.enviarMensaje("> *" + x.getNombre() + "* - Movimiento: " + x.getMovimiento() + "%");
-                                TBS.enviarMensaje("- - - - - - - - - - - ");
-                            } catch (TelegramApiException e) {
-                                e.printStackTrace();
-                            }
+                        if (x.getMovimiento() > traerDatos().getMovimiento() && x.getMovimiento() > 0) {
+                            TBS.enviarMensaje("> *" + x.getNombre() + "* - Movimiento: " + x.getMovimiento() + "%");
+                            TBS.enviarMensaje("- - - - - - - - - - - ");
                         }
                     }
-
-//
-//                    historial.forEach((x) -> {
-//
-//                    });
                 }
+
             } catch (Exception e) {
-                logger.info(e.getMessage());
+                logger.error(e.getMessage());
             }
 
         });
 
         timer.start();
+
     }
 
     @RequestMapping(value = "/setMovimiento/{movimiento}", method = RequestMethod.GET)
@@ -183,117 +161,7 @@ public class NewHomeController extends TelegramLongPollingBot {
         }
         return respuesta;
     }
-//    private void enviarDatos(BeanContexto contexto) throws IOException {
-//
-//        PrintWriter out = null;
-//        String datos = contexto.getMoneda() + ";" + contexto.getTiempo() + ";" + contexto.getMovimiento() + ";;";
-//        try {
-//            out = new PrintWriter(new FileWriter("datos.txt"));
-//            out.write(datos);
-//        } catch (Exception e) {
-//            logger.error("NO SE PUDO ESCRIBIR EL ARCHIVO");
-//        } finally {
-//            if (out != null)
-//                out.close();
-//        }
-//
-//    }
 
-//    @EventListener(ApplicationReadyEvent.class)
-//    public void runAfterStartup() throws TelegramApiException, IOException {
-//        System.out.println("Inicio el BOT");
-//        enviarMensaje("BOT PREPARADO - INGRESE /start PARA INICIAR");
-//        traerDatos();
-//
-////        HttpSession session = request.getSession();
-////        session.setAttribute("CONTEXTO", new BeanContexto("USDT", 1, 000.1));
-////
-////        session.getAttribute("CONTEXTO");
-////        BeanContexto contexto = (BeanContexto) session;
-//
-//        logger.info("aca");
-//
-//    }
-
-    //    @RequestMapping(value = "/iniciarLoop", method = RequestMethod.GET)
-//    public @ResponseBody
-//    void loop(boolean b) throws InterruptedException {
-//        logger.info("*** INICIAR LOOP ***");
-////        if (session.getAttribute("CONTEXTO") == null) {
-////            session.setAttribute("CONTEXTO", new BeanContexto("USDT", 1, 000.1));
-////        }
-//
-////        BeanContexto contexto = (BeanContexto) session.getAttribute("CONTEXTO");
-//
-//        while (b) {
-//            logger.info("*** SE INICIA LOOP ***");
-//
-//
-//            Thread.sleep(2000);
-//        }
-//    }
-
-
-//    public BeanContexto traerDatos() throws IOException {
-//        BufferedReader in = null;
-//        String line;
-//        BeanContexto contexto = null;
-//        try {
-//            in = new BufferedReader(new FileReader("datos.txt"));
-//
-//            while ((line = in.readLine()) != null) {
-//                logger.info(line);
-//                contexto = new BeanContexto(line.split(";")[0], Integer.parseInt(line.split(";")[1]), Double.parseDouble(line.split(";")[2]));
-//            }
-//
-//        } catch (Exception e) {
-//            logger.error(e.getMessage());
-//        } finally {
-//            // cerrando los streams
-//            if (in != null)
-//                in.close();
-//
-//        }
-//        return contexto;
-//    }
-
-
-//    public void  loopConHilo(boolean x) {
-//        Runnable runnable = new Runnable() {
-//
-//
-//
-//            @Override
-//            public void run() {
-//                // Esto se ejecuta en segundo plano una única vez
-//                while (true) {
-//                    // Pero usamos un truco y hacemos un ciclo infinito
-//                    try {
-//                        // En él, hacemos que el hilo duerma
-//                        Thread.sleep(1000);
-//                        // Y después realizamos las operaciones
-//                        System.out.println("Me imprimo cada segundo");
-//                        // Así, se da la impresión de que se ejecuta cada cierto tiempo
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        };
-//
-//        // Creamos un hilo y le pasamos el runnable
-//        Thread hilo = new Thread(runnable);
-//        if(x == true) {
-//            logger.info("" +  hilo.getId());
-//            hilo.start();
-//        } else {
-//            hilo.stop();
-//        }
-//
-//
-//        // Y aquí podemos hacer cualquier cosa, en el hilo principal del programa
-//        System.out.println("Yo imprimo en el hilo principal");
-//    }
 
     @Override
     public String getBotUsername() {
@@ -308,7 +176,6 @@ public class NewHomeController extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         logger.info(update.getMessage().getText());
-//        try {
         try {
             try {
                 procesarInformacionRecibida(update.getMessage().getText());
@@ -318,9 +185,6 @@ public class NewHomeController extends TelegramLongPollingBot {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
     }
 
     public void enviarMensaje(String texto) throws TelegramApiException {
@@ -331,28 +195,6 @@ public class NewHomeController extends TelegramLongPollingBot {
 
     }
 
-//    public ReplyKeyboardMarkup botonesBot() throws TelegramApiException {
-//        logger.info("BOTONES BOT");
-//
-//        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-//        List<List<InlineKeyboardButton>> inlineButtons = new ArrayList<>();
-//        List<InlineKeyboardButton> inlineKeyboardButtonList = new ArrayList<>();
-//        InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
-//        InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-//        inlineKeyboardButton1.setText("uno");
-//        inlineKeyboardButton2.setText("dos");
-//        inlineKeyboardButton1.setCallbackData("sasdasd");
-//        inlineKeyboardButton2.setCallbackData("sasdasdss");
-//        inlineKeyboardButtonList.add(inlineKeyboardButton1);
-//        inlineKeyboardButtonList.add(inlineKeyboardButton2);
-//        inlineButtons.add(inlineKeyboardButtonList);
-//        inlineKeyboardMarkup.setKeyboard(inlineButtons);
-//
-//
-//        SendMessage message = new SendMessage();
-//        message.setReplyMarkup(inlineKeyboardMarkup);
-//    }
-
     private void procesarInformacionRecibida(String comando) throws InterruptedException, TelegramApiException {
 
         logger.info("Se ingreso el comando " + comando);
@@ -361,86 +203,13 @@ public class NewHomeController extends TelegramLongPollingBot {
 
         switch (clave) {
             case "/start":
-                logger.info("Ejecutando Service de inicio");
-
-                SendMessage sendMessage = new SendMessage();
-                sendMessage.setParseMode(ParseMode.MARKDOWN);
-                sendMessage.setText("Hola, aca estoy!");
-                sendMessage.setChatId("865967445");
-
-                ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-                List<KeyboardRow> keyboardRowList = new ArrayList<>();
-                KeyboardRow keyboardRow1 = new KeyboardRow();
-                KeyboardButton keyboardButton1 = new KeyboardButton();
-                KeyboardButton keyboardButton2 = new KeyboardButton();
-                keyboardButton1.setText("/m BTC");
-                keyboardButton2.setText("/m USDT");
-                keyboardRow1.add(keyboardButton1);
-                keyboardRow1.add(keyboardButton2);
-                keyboardRowList.add(keyboardRow1);
-
-                KeyboardRow keyboardRow2 = new KeyboardRow();
-                KeyboardButton keyboardButton1_2 = new KeyboardButton();
-                KeyboardButton keyboardButton2_2 = new KeyboardButton();
-                KeyboardButton keyboardButton3_2 = new KeyboardButton();
-                KeyboardButton keyboardButton4_2 = new KeyboardButton();
-                KeyboardButton keyboardButton5_2 = new KeyboardButton();
-                keyboardButton1_2.setText("/t 1");
-                keyboardButton2_2.setText("/t 3");
-                keyboardButton3_2.setText("/t 5");
-                keyboardButton4_2.setText("/t 10");
-                keyboardButton5_2.setText("/t 15");
-                keyboardRow2.add(keyboardButton1_2);
-                keyboardRow2.add(keyboardButton2_2);
-                keyboardRow2.add(keyboardButton3_2);
-                keyboardRow2.add(keyboardButton4_2);
-                keyboardRow2.add(keyboardButton5_2);
-
-                keyboardRowList.add(keyboardRow2);
-
-                KeyboardRow keyboardRow3 = new KeyboardRow();
-                KeyboardButton keyboardButton1_3 = new KeyboardButton();
-                KeyboardButton keyboardButton2_3 = new KeyboardButton();
-                KeyboardButton keyboardButton3_3 = new KeyboardButton();
-                KeyboardButton keyboardButton4_3 = new KeyboardButton();
-                KeyboardButton keyboardButton5_3 = new KeyboardButton();
-
-                keyboardButton1_3.setText("/% 0.001");
-                keyboardButton2_3.setText("/% 0.005");
-                keyboardButton3_3.setText("/% 0.010");
-                keyboardButton4_3.setText("/% 0.015");
-                keyboardButton5_3.setText("/% 0.020");
-
-                keyboardRow3.add(keyboardButton1_3);
-                keyboardRow3.add(keyboardButton2_3);
-                keyboardRow3.add(keyboardButton3_3);
-                keyboardRow3.add(keyboardButton4_3);
-                keyboardRow3.add(keyboardButton5_3);
-
-                keyboardRowList.add(keyboardRow3);
-
-                KeyboardRow keyboardRow4 = new KeyboardRow();
-                KeyboardButton keyboardButton1_4 = new KeyboardButton();
-                KeyboardButton keyboardButton2_4 = new KeyboardButton();
-
-                keyboardButton1_4.setText("/help");
-                keyboardButton2_4.setText("/aux");
-
-                keyboardRow4.add(keyboardButton1_4);
-                keyboardRow4.add(keyboardButton2_4);
-
-                keyboardRowList.add(keyboardRow4);
-
-
-                replyKeyboardMarkup.setKeyboard(keyboardRowList);
-                sendMessage.setReplyMarkup(replyKeyboardMarkup);
-                execute(sendMessage);
+                iniciarBotonera();
                 break;
             case "/m":
                 logger.info("*** Se ingreso modificador de moneda ***");
                 try {
                     Respuesta res = setearMoneda(comando.split(" ")[1]);
-                    if(res.getCodigo() == "10") {
+                    if (res.getCodigo() == "10") {
                         enviarMensaje(res.getTexto());
                     }
                 } catch (IOException e) {
@@ -452,7 +221,7 @@ public class NewHomeController extends TelegramLongPollingBot {
                 logger.info("*** Se ingreso modificador de tiempo de actualizacion ***");
                 try {
                     Respuesta res = setearTiempo(Integer.parseInt(comando.split(" ")[1]));
-                    if(res.getCodigo() == "10") {
+                    if (res.getCodigo() == "10") {
                         enviarMensaje(res.getTexto());
                         loop();
                     }
@@ -462,10 +231,10 @@ public class NewHomeController extends TelegramLongPollingBot {
                 }
                 break;
             case "/%":
-                logger.info("*** Se ingreso modificador de porcentaje ***");
+                logger.info("*** SE INGRESA AL MODIFICADOR DE % ***");
                 try {
                     Respuesta res = setearMovimiento(Double.parseDouble(comando.split(" ")[1]));
-                    if(res.getCodigo() == "10") {
+                    if (res.getCodigo() == "10") {
                         enviarMensaje(res.getTexto());
                     }
                 } catch (IOException e) {
@@ -482,12 +251,89 @@ public class NewHomeController extends TelegramLongPollingBot {
                 break;
             case "/help":
                 logger.info("*** Se ingreso a consulta de Help ***");
-                    enviarMensaje("HEEEEEELP");
+                enviarMensaje("HEEEEEELP");
                 break;
             default:
                 logger.info("default");
                 break;
         }
+    }
+
+    private void iniciarBotonera() throws TelegramApiException {
+        logger.info("Ejecutando Service de inicio");
+
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setParseMode(ParseMode.MARKDOWN);
+        sendMessage.setText("Hola, aca estoy!");
+        sendMessage.setChatId("865967445");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> keyboardRowList = new ArrayList<>();
+        KeyboardRow keyboardRow1 = new KeyboardRow();
+        KeyboardButton keyboardButton1 = new KeyboardButton();
+        KeyboardButton keyboardButton2 = new KeyboardButton();
+        keyboardButton1.setText("/m BTC");
+        keyboardButton2.setText("/m USDT");
+        keyboardRow1.add(keyboardButton1);
+        keyboardRow1.add(keyboardButton2);
+        keyboardRowList.add(keyboardRow1);
+
+        KeyboardRow keyboardRow2 = new KeyboardRow();
+        KeyboardButton keyboardButton1_2 = new KeyboardButton();
+        KeyboardButton keyboardButton2_2 = new KeyboardButton();
+        KeyboardButton keyboardButton3_2 = new KeyboardButton();
+        KeyboardButton keyboardButton4_2 = new KeyboardButton();
+        KeyboardButton keyboardButton5_2 = new KeyboardButton();
+        keyboardButton1_2.setText("/t 1");
+        keyboardButton2_2.setText("/t 3");
+        keyboardButton3_2.setText("/t 5");
+        keyboardButton4_2.setText("/t 10");
+        keyboardButton5_2.setText("/t 15");
+        keyboardRow2.add(keyboardButton1_2);
+        keyboardRow2.add(keyboardButton2_2);
+        keyboardRow2.add(keyboardButton3_2);
+        keyboardRow2.add(keyboardButton4_2);
+        keyboardRow2.add(keyboardButton5_2);
+
+        keyboardRowList.add(keyboardRow2);
+
+        KeyboardRow keyboardRow3 = new KeyboardRow();
+        KeyboardButton keyboardButton1_3 = new KeyboardButton();
+        KeyboardButton keyboardButton2_3 = new KeyboardButton();
+        KeyboardButton keyboardButton3_3 = new KeyboardButton();
+        KeyboardButton keyboardButton4_3 = new KeyboardButton();
+        KeyboardButton keyboardButton5_3 = new KeyboardButton();
+
+        keyboardButton1_3.setText("/% 0.001");
+        keyboardButton2_3.setText("/% 0.005");
+        keyboardButton3_3.setText("/% 0.010");
+        keyboardButton4_3.setText("/% 0.015");
+        keyboardButton5_3.setText("/% 0.020");
+
+        keyboardRow3.add(keyboardButton1_3);
+        keyboardRow3.add(keyboardButton2_3);
+        keyboardRow3.add(keyboardButton3_3);
+        keyboardRow3.add(keyboardButton4_3);
+        keyboardRow3.add(keyboardButton5_3);
+
+        keyboardRowList.add(keyboardRow3);
+
+        KeyboardRow keyboardRow4 = new KeyboardRow();
+        KeyboardButton keyboardButton1_4 = new KeyboardButton();
+        KeyboardButton keyboardButton2_4 = new KeyboardButton();
+
+        keyboardButton1_4.setText("/help");
+        keyboardButton2_4.setText("/aux");
+
+        keyboardRow4.add(keyboardButton1_4);
+        keyboardRow4.add(keyboardButton2_4);
+
+        keyboardRowList.add(keyboardRow4);
+
+
+        replyKeyboardMarkup.setKeyboard(keyboardRowList);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        execute(sendMessage);
     }
 
 
@@ -508,6 +354,7 @@ public class NewHomeController extends TelegramLongPollingBot {
     }
 
     public BeanContexto traerDatos() throws IOException {
+        logger.info(" *** TRAER INFO *** ");
         BufferedReader in = null;
         String line;
         BeanContexto contexto = null;
@@ -516,20 +363,17 @@ public class NewHomeController extends TelegramLongPollingBot {
 
             while ((line = in.readLine()) != null) {
                 logger.info(line);
+//                contexto = new BeanContexto(line.split(";")[0], Integer.parseInt(line.split(";")[1]), Double.parseDouble(line.split(";")[2]), Long.parseLong(line.split(";")[3]));
                 contexto = new BeanContexto(line.split(";")[0], Integer.parseInt(line.split(";")[1]), Double.parseDouble(line.split(";")[2]));
             }
-
+            logger.info("INFO: " + contexto.toString());
         } catch (Exception e) {
             logger.error(e.getMessage());
         } finally {
-            // cerrando los streams
             if (in != null)
                 in.close();
-
         }
         return contexto;
     }
-
-
 
 }

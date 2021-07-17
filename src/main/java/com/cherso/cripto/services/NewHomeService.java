@@ -30,19 +30,17 @@ public class NewHomeService {
 
 
     public List<BeanMoneda> buscarDatos(BeanContexto contexto) throws Exception {
+        logger.info("buscarDatos");
         try {
-            logger.info("Ingreso al Home Service");
-
             String res = peticionHttpGet(urlPriceBinance);
             List<BeanMoneda> listaCoins = parseBinancePriceList(res);
-
             List<BeanMoneda> listaMonedaSeleccionada = filtrarMonedas(listaCoins, contexto.getMoneda());
-
             return listaMonedaSeleccionada;
         } catch (Exception e) {
             logger.error(e.getMessage());
             throw e;
         }
+
     }
 
     private List<BeanMoneda> filtrarMonedas(List<BeanMoneda> listaCoins, String moneda) {
@@ -60,9 +58,8 @@ public class NewHomeService {
     }
 
     private List<BeanMoneda> parseBinancePriceList(String res) throws JsonProcessingException {
-        try {
-            logger.info("Se intenta parsear el String");
 
+        try {
             ObjectMapper mapper = new ObjectMapper();
             List<BeanMoneda> listCoins = mapper.readValue(res, new TypeReference<List<BeanMoneda>>() {
             });
@@ -71,6 +68,7 @@ public class NewHomeService {
             logger.error(e.getMessage());
             throw e;
         }
+
     }
 
     public static String peticionHttpGet(String urlParaVisitar) throws Exception {
@@ -87,12 +85,10 @@ public class NewHomeService {
         return resultado.toString();
     }
 
-
     public List<HistorialMoneda> procesarDatos(List<BeanMoneda> listaMonedas, List<HistorialMoneda> historial) {
-
         List<HistorialMoneda> historialMonedas = new ArrayList<>();
         if (historial == null) {
-            logger.info("PRIMERO ENTRA ACA");
+            logger.info(" *** HISTORIAL VACIO, ESPERAR DATOS ***");
 
             for (BeanMoneda moneda : listaMonedas) {
                 HistorialMoneda hm = new HistorialMoneda();
@@ -103,26 +99,20 @@ public class NewHomeService {
             return historialMonedas;
 
         } else {
+            logger.info("*** SE ACTUALIZA HISTORIAL ***");
             for (HistorialMoneda coinHistorial : historial) {
                 BeanMoneda bm = buscarMoneda(coinHistorial.getNombre(), listaMonedas);
                 String aux = coinHistorial.getPrecioActual();
                 coinHistorial.setPrecioActual(bm.getPrice());
                 coinHistorial.setPrecioAnterior(aux);
-
                 Double answer = ((Double.parseDouble(coinHistorial.getPrecioActual()) / Double.parseDouble(coinHistorial.getPrecioAnterior())) - 1);
                 BigDecimal formatNumber = new BigDecimal(answer);
                 formatNumber = formatNumber.setScale(5, RoundingMode.DOWN);
-                logger.info(coinHistorial.getNombre() + " - " + formatNumber);
-//                coinHistorial.setMovimiento(formatNumber);
-
-                double d = formatNumber.doubleValue();
-                coinHistorial.setMovimiento(d);
+                coinHistorial.setMovimiento(formatNumber.doubleValue());
             }
-            logger.info("DESPUES ENTRA ACA");
             return historial;
         }
     }
-
 
     private BeanMoneda buscarMoneda(String nombre, List<BeanMoneda> listaMonedas) {
 
@@ -134,7 +124,5 @@ public class NewHomeService {
 
         return null;
     }
-
-
 
 }
