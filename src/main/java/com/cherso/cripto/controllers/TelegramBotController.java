@@ -153,7 +153,7 @@ public class TelegramBotController {
 //
 //    @Override
 //    public String getBotToken() {
-//        return "1781766783:AAH-xsHVOrN3YUiWIW2bklHem7S-XGQ_SCk";
+//        return "k";
 //    }
 //
 //    @Override
@@ -173,7 +173,7 @@ public class TelegramBotController {
 //    public void enviarMensaje(String texto) throws TelegramApiException {
 //        SendMessage message = new SendMessage();
 //        message.setText(texto);
-//        message.setChatId("865967445");
+//        message.setChatId("");
 //        execute(message);
 //
 //    }
