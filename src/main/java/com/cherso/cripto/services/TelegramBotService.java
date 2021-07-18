@@ -113,7 +113,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setParseMode(ParseMode.MARKDOWN);
         sendMessage.setText("Hola, aca estoy!");
-        sendMessage.setChatId("865967445");
+        sendMessage.setChatId("");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> keyboardRowList = new ArrayList<>();
