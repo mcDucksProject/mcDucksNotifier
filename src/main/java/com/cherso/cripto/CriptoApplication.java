@@ -1,6 +1,6 @@
 package com.cherso.cripto;
 
-import com.cherso.cripto.controllers.NewHomeController;
+import com.cherso.cripto.services.TelegramBotService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -22,7 +22,7 @@ public class CriptoApplication {
 
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         try {
-            telegramBotsApi.registerBot(new NewHomeController());
+            telegramBotsApi.registerBot(new TelegramBotService());
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
