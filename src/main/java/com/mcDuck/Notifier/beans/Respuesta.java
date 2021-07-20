@@ -1,4 +1,4 @@
-package com.cherso.cripto.beans;
+package com.mcDuck.Notifier.beans;
 
 public class Respuesta {
 

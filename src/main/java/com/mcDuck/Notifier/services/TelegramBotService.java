@@ -1,7 +1,8 @@
-package com.cherso.cripto.services;
+package com.mcDuck.Notifier.services;
 
-import com.cherso.cripto.beans.BeanContexto;
-import com.cherso.cripto.beans.Respuesta;
+import com.mcDuck.Notifier.beans.BeanContexto;
+import com.mcDuck.Notifier.beans.Respuesta;
+import com.mcDuck.Notifier.utils.ConstantesBot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,6 @@ public class TelegramBotService extends TelegramLongPollingBot {
 
     Logger logger = LoggerFactory.getLogger(TelegramBotService.class);
 
-
     @Override
     public String getBotUsername() {
         return "Bot Movimientos";
@@ -31,7 +31,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "";
+        return ConstantesBot.BOT_TOKEN;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
     public void enviarMensaje(String texto) throws TelegramApiException {
         SendMessage message = new SendMessage();
         message.setText(texto);
-        message.setChatId("");
+        message.setChatId(ConstantesBot.CHAT_ID);
         execute(message);
 
     }
@@ -113,7 +113,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setParseMode(ParseMode.MARKDOWN);
         sendMessage.setText("Hola, aca estoy!");
-        sendMessage.setChatId("");
+        sendMessage.setChatId(ConstantesBot.CHAT_ID);
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> keyboardRowList = new ArrayList<>();
@@ -126,24 +126,24 @@ public class TelegramBotService extends TelegramLongPollingBot {
         keyboardRow1.add(keyboardButton2);
         keyboardRowList.add(keyboardRow1);
 
-        KeyboardRow keyboardRow2 = new KeyboardRow();
-        KeyboardButton keyboardButton1_2 = new KeyboardButton();
-        KeyboardButton keyboardButton2_2 = new KeyboardButton();
-        KeyboardButton keyboardButton3_2 = new KeyboardButton();
-        KeyboardButton keyboardButton4_2 = new KeyboardButton();
-        KeyboardButton keyboardButton5_2 = new KeyboardButton();
-        keyboardButton1_2.setText("/t 1");
-        keyboardButton2_2.setText("/t 3");
-        keyboardButton3_2.setText("/t 5");
-        keyboardButton4_2.setText("/t 10");
-        keyboardButton5_2.setText("/t 15");
-        keyboardRow2.add(keyboardButton1_2);
-        keyboardRow2.add(keyboardButton2_2);
-        keyboardRow2.add(keyboardButton3_2);
-        keyboardRow2.add(keyboardButton4_2);
-        keyboardRow2.add(keyboardButton5_2);
-
-        keyboardRowList.add(keyboardRow2);
+//        KeyboardRow keyboardRow2 = new KeyboardRow();
+//        KeyboardButton keyboardButton1_2 = new KeyboardButton();
+//        KeyboardButton keyboardButton2_2 = new KeyboardButton();
+//        KeyboardButton keyboardButton3_2 = new KeyboardButton();
+//        KeyboardButton keyboardButton4_2 = new KeyboardButton();
+//        KeyboardButton keyboardButton5_2 = new KeyboardButton();
+//        keyboardButton1_2.setText("/t 1");
+//        keyboardButton2_2.setText("/t 3");
+//        keyboardButton3_2.setText("/t 5");
+//        keyboardButton4_2.setText("/t 10");
+//        keyboardButton5_2.setText("/t 15");
+//        keyboardRow2.add(keyboardButton1_2);
+//        keyboardRow2.add(keyboardButton2_2);
+//        keyboardRow2.add(keyboardButton3_2);
+//        keyboardRow2.add(keyboardButton4_2);
+//        keyboardRow2.add(keyboardButton5_2);
+//
+//        keyboardRowList.add(keyboardRow2);
 
         KeyboardRow keyboardRow3 = new KeyboardRow();
         KeyboardButton keyboardButton1_3 = new KeyboardButton();
@@ -213,7 +213,6 @@ public class TelegramBotService extends TelegramLongPollingBot {
                 logger.info(line);
                 contexto = new BeanContexto(line.split(";")[0], Integer.parseInt(line.split(";")[1]), Double.parseDouble(line.split(";")[2]));
             }
-            logger.info("INFO: " + contexto.toString());
         } catch (Exception e) {
             logger.error(e.getMessage());
         } finally {

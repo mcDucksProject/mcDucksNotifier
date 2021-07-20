@@ -1,4 +1,4 @@
-package com.cherso.cripto;
+package com.mcDuck.Notifier;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

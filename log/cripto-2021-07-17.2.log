@@ -1031,7 +1031,7 @@
 2021-07-17 22:56:59.992  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 22:56:59.992  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 22:56:59.992  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 22:57:00.938  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 22:57:00.938  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 22:57:00.940  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 22:57:00.940  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 22:57:00.940  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -2119,7 +2119,7 @@
 2021-07-17 23:02:00.003  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:02:00.003  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:02:00.003  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:02:01.577  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:02:01.577  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:02:01.579  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:02:01.580  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:02:01.580  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -3207,7 +3207,7 @@
 2021-07-17 23:07:00.023  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:07:00.024  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:07:00.024  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:07:00.741  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:07:00.741  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:07:00.743  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:07:00.744  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:07:00.744  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -4295,7 +4295,7 @@
 2021-07-17 23:12:00.034  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:12:00.034  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:12:00.034  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:12:00.769  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:12:00.769  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:12:00.771  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:12:00.772  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:12:00.772  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -5383,7 +5383,7 @@
 2021-07-17 23:17:00.050  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:17:00.050  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:17:00.050  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:17:00.973  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:17:00.973  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:17:00.975  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:17:00.975  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:17:00.975  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -6471,7 +6471,7 @@
 2021-07-17 23:22:00.074  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:22:00.074  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:22:00.075  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:22:00.988  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:22:00.988  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:22:00.990  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:22:00.991  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:22:00.991  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -7559,7 +7559,7 @@
 2021-07-17 23:27:00.094  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:27:00.094  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:27:00.094  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:27:01.374  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:27:01.374  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:27:01.377  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:27:01.377  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:27:01.377  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -8647,7 +8647,7 @@
 2021-07-17 23:32:00.127  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:32:00.127  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:32:00.127  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:32:00.865  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:32:00.865  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:32:00.868  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:32:00.868  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:32:00.868  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
@@ -9735,7 +9735,7 @@
 2021-07-17 23:37:00.136  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:37:00.136  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03
 2021-07-17 23:37:00.136  INFO 1300 --- [AWT-EventQueue-0] c.cherso.cripto.services.NewHomeService  : buscarDatos
-2021-07-17 23:37:01.528  INFO 1300 --- [AWT-EventQueue-0] com.cherso.cripto.beans.BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
+2021-07-17 23:37:01.528  INFO 1300 --- [AWT-EventQueue-0] BeanHistorial    :  *** SE ACTUALIZAN LOS DATOS ***
 2021-07-17 23:37:01.534  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   :  *** TRAER INFO *** 
 2021-07-17 23:37:01.535  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : BTC;5;0.03;;
 2021-07-17 23:37:01.535  INFO 1300 --- [AWT-EventQueue-0] c.c.cripto.services.TelegramBotService   : INFO: BTC;5;0.03

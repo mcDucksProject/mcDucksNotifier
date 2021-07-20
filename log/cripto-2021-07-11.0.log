@@ -1,6 +1,6 @@
-2021-07-11 21:06:38.144  INFO 19076 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 19076 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 21:06:38.166  INFO 19076 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 21:06:38.166 DEBUG 19076 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 21:06:38.144  INFO 19076 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 19076 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 21:06:38.166  INFO 19076 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 21:06:38.166 DEBUG 19076 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 21:06:38.311 DEBUG 19076 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:06:38.311 DEBUG 19076 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 21:06:38.311 DEBUG 19076 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -897,12 +897,12 @@ Unconditional classes:
 
 
 2021-07-11 21:06:47.464 DEBUG 19076 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 21:06:47.468  INFO 19076 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 9.838 seconds (JVM running for 12.44)
+2021-07-11 21:06:47.468  INFO 19076 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 9.838 seconds (JVM running for 12.44)
 2021-07-11 21:06:47.469 DEBUG 19076 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 21:06:47.478 DEBUG 19076 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 21:06:47.478 DEBUG 19076 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 21:06:47.478 DEBUG 19076 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@15e6246
-2021-07-11 21:06:47.479 DEBUG 19076 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 21:06:47.479 DEBUG 19076 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:06:47.479  INFO 19076 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 21:06:47.480  INFO 19076 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 21:06:47.557 DEBUG 19076 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
@@ -2232,9 +2232,9 @@ java.lang.NullPointerException: null
 2021-07-11 21:39:01.120 DEBUG 19076 --- [SpringApplicationShutdownHook] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
 2021-07-11 21:39:01.120 DEBUG 19076 --- [SpringApplicationShutdownHook] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7c5051, started on Sun Jul 11 21:06:38 ART 2021
 2021-07-11 21:39:01.120 DEBUG 19076 --- [SpringApplicationShutdownHook] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 21:43:38.381  INFO 16672 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 16672 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 21:43:38.383  INFO 16672 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 21:43:38.383 DEBUG 16672 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 21:43:38.381  INFO 16672 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 16672 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 21:43:38.383  INFO 16672 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 21:43:38.383 DEBUG 16672 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 21:43:38.506 DEBUG 16672 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:43:38.506 DEBUG 16672 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 21:43:38.506 DEBUG 16672 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -3131,18 +3131,18 @@ Unconditional classes:
 
 
 2021-07-11 21:43:40.319 DEBUG 16672 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 21:43:40.321  INFO 16672 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 2.348 seconds (JVM running for 3.565)
+2021-07-11 21:43:40.321  INFO 16672 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 2.348 seconds (JVM running for 3.565)
 2021-07-11 21:43:40.323 DEBUG 16672 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 21:43:40.324 DEBUG 16672 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 21:43:40.324 DEBUG 16672 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 21:43:40.324 DEBUG 16672 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@df6ef7
-2021-07-11 21:43:40.324 DEBUG 16672 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 21:43:40.324 DEBUG 16672 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:43:40.324  INFO 16672 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 21:43:40.325  INFO 16672 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 21:43:42.474 DEBUG 16672 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2021-07-11 21:48:48.427  INFO 10616 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 10616 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 21:48:48.427  INFO 10616 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 21:48:48.427 DEBUG 10616 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 21:48:48.427  INFO 10616 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 10616 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 21:48:48.427  INFO 10616 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 21:48:48.427 DEBUG 10616 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 21:48:48.548 DEBUG 10616 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:48:48.548 DEBUG 10616 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 21:48:48.548 DEBUG 10616 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -4039,12 +4039,12 @@ Unconditional classes:
 
 
 2021-07-11 21:48:50.687 DEBUG 10616 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 21:48:50.687  INFO 10616 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 2.76 seconds (JVM running for 4.089)
+2021-07-11 21:48:50.687  INFO 10616 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 2.76 seconds (JVM running for 4.089)
 2021-07-11 21:48:50.687 DEBUG 10616 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 21:48:50.687 DEBUG 10616 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 21:48:50.687 DEBUG 10616 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 21:48:50.687 DEBUG 10616 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@52f60
-2021-07-11 21:48:50.687 DEBUG 10616 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 21:48:50.687 DEBUG 10616 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:48:50.687  INFO 10616 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 21:48:50.687  INFO 10616 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 21:48:50.708 DEBUG 10616 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
@@ -4052,9 +4052,9 @@ Unconditional classes:
 2021-07-11 21:51:28.440 DEBUG 10616 --- [SpringApplicationShutdownHook] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
 2021-07-11 21:51:28.440 DEBUG 10616 --- [SpringApplicationShutdownHook] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@113388e, started on Sun Jul 11 21:48:48 ART 2021
 2021-07-11 21:51:28.441 DEBUG 10616 --- [SpringApplicationShutdownHook] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 21:51:34.222  INFO 17188 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 17188 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 21:51:34.225  INFO 17188 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 21:51:34.225 DEBUG 17188 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 21:51:34.222  INFO 17188 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 17188 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 21:51:34.225  INFO 17188 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 21:51:34.225 DEBUG 17188 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 21:51:34.360 DEBUG 17188 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:51:34.361 DEBUG 17188 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 21:51:34.361 DEBUG 17188 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -4951,12 +4951,12 @@ Unconditional classes:
 
 
 2021-07-11 21:51:36.476 DEBUG 17188 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 21:51:36.479  INFO 17188 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 2.741 seconds (JVM running for 4.048)
+2021-07-11 21:51:36.479  INFO 17188 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 2.741 seconds (JVM running for 4.048)
 2021-07-11 21:51:36.481 DEBUG 17188 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 21:51:36.482 DEBUG 17188 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 21:51:36.482 DEBUG 17188 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 21:51:36.482 DEBUG 17188 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1f6a808
-2021-07-11 21:51:36.482 DEBUG 17188 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 21:51:36.482 DEBUG 17188 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 21:51:36.482  INFO 17188 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 21:51:36.483  INFO 17188 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 21:51:36.484  INFO 17188 --- [restartedMain] c.c.c.controllers.NewHomeController      : BOTONES BOT
@@ -4970,9 +4970,9 @@ Unconditional classes:
 2021-07-11 22:00:11.812 DEBUG 17188 --- [SpringApplicationShutdownHook] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
 2021-07-11 22:00:11.813 DEBUG 17188 --- [SpringApplicationShutdownHook] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3bf619, started on Sun Jul 11 21:51:34 ART 2021
 2021-07-11 22:00:11.813 DEBUG 17188 --- [SpringApplicationShutdownHook] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 22:02:10.454  INFO 3944 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 3944 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 22:02:10.457  INFO 3944 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 22:02:10.459 DEBUG 3944 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 22:02:10.454  INFO 3944 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 3944 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 22:02:10.457  INFO 3944 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 22:02:10.459 DEBUG 3944 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 22:02:10.525 DEBUG 3944 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:02:10.525 DEBUG 3944 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 22:02:10.525 DEBUG 3944 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -5869,12 +5869,12 @@ Unconditional classes:
 
 
 2021-07-11 22:02:12.739 DEBUG 3944 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 22:02:12.742  INFO 3944 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 2.77 seconds (JVM running for 4.183)
+2021-07-11 22:02:12.742  INFO 3944 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 2.77 seconds (JVM running for 4.183)
 2021-07-11 22:02:12.743 DEBUG 3944 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 22:02:12.745 DEBUG 3944 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 22:02:12.745 DEBUG 3944 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 22:02:12.745 DEBUG 3944 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cc108d
-2021-07-11 22:02:12.745 DEBUG 3944 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 22:02:12.745 DEBUG 3944 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:02:12.745  INFO 3944 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 22:02:12.746  INFO 3944 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 22:02:12.789 DEBUG 3944 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
@@ -5925,9 +5925,9 @@ java.lang.NullPointerException: null
 2021-07-11 22:10:32.343 DEBUG 3944 --- [SpringApplicationShutdownHook] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
 2021-07-11 22:10:32.344 DEBUG 3944 --- [SpringApplicationShutdownHook] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1a6f409, started on Sun Jul 11 22:02:10 ART 2021
 2021-07-11 22:10:32.344 DEBUG 3944 --- [SpringApplicationShutdownHook] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 22:10:37.584  INFO 18836 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 18836 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 22:10:37.587  INFO 18836 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 22:10:37.587 DEBUG 18836 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 22:10:37.584  INFO 18836 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 18836 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 22:10:37.587  INFO 18836 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 22:10:37.587 DEBUG 18836 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 22:10:37.712 DEBUG 18836 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:10:37.712 DEBUG 18836 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 22:10:37.712 DEBUG 18836 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -6824,12 +6824,12 @@ Unconditional classes:
 
 
 2021-07-11 22:10:39.506 DEBUG 18836 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 22:10:39.508  INFO 18836 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 2.327 seconds (JVM running for 3.547)
+2021-07-11 22:10:39.508  INFO 18836 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 2.327 seconds (JVM running for 3.547)
 2021-07-11 22:10:39.509 DEBUG 18836 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 22:10:39.510 DEBUG 18836 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 22:10:39.510 DEBUG 18836 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 22:10:39.510 DEBUG 18836 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@df6ef7
-2021-07-11 22:10:39.510 DEBUG 18836 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 22:10:39.510 DEBUG 18836 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:10:39.511  INFO 18836 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 22:10:39.511  INFO 18836 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 22:10:39.526 DEBUG 18836 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
@@ -6842,9 +6842,9 @@ Unconditional classes:
 2021-07-11 22:13:18.018  INFO 18836 --- [Bot Movimientos Telegram Executor] c.c.c.controllers.NewHomeController      : /start
 2021-07-11 22:13:18.019  INFO 18836 --- [Bot Movimientos Telegram Executor] c.c.c.controllers.NewHomeController      : Se ingreso el comando /start
 2021-07-11 22:13:18.019  INFO 18836 --- [Bot Movimientos Telegram Executor] c.c.c.controllers.NewHomeController      : Ejecutando Service de inicio
-2021-07-11 22:23:42.732  INFO 19208 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 19208 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 22:23:42.735  INFO 19208 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 22:23:42.736 DEBUG 19208 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 22:23:42.732  INFO 19208 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 19208 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 22:23:42.735  INFO 19208 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 22:23:42.736 DEBUG 19208 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 22:23:42.856 DEBUG 19208 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:23:42.856 DEBUG 19208 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 22:23:42.856 DEBUG 19208 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -7741,12 +7741,12 @@ Unconditional classes:
 
 
 2021-07-11 22:23:44.977 DEBUG 19208 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 22:23:44.980  INFO 19208 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 2.727 seconds (JVM running for 4.061)
+2021-07-11 22:23:44.980  INFO 19208 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 2.727 seconds (JVM running for 4.061)
 2021-07-11 22:23:44.982 DEBUG 19208 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 22:23:44.983 DEBUG 19208 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 22:23:44.983 DEBUG 19208 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 22:23:44.983 DEBUG 19208 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@52f60
-2021-07-11 22:23:44.983 DEBUG 19208 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 22:23:44.983 DEBUG 19208 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:23:44.984  INFO 19208 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 22:23:44.985  INFO 19208 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 22:23:44.999 DEBUG 19208 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
@@ -7762,9 +7762,9 @@ Unconditional classes:
 2021-07-11 22:45:51.796 DEBUG 19208 --- [SpringApplicationShutdownHook] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
 2021-07-11 22:45:51.796 DEBUG 19208 --- [SpringApplicationShutdownHook] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@113388e, started on Sun Jul 11 22:23:42 ART 2021
 2021-07-11 22:45:51.796 DEBUG 19208 --- [SpringApplicationShutdownHook] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 22:47:04.821  INFO 14912 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 14912 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
-2021-07-11 22:47:04.828  INFO 14912 --- [restartedMain] com.cherso.cripto.CriptoApplication      : No active profile set, falling back to default profiles: default
-2021-07-11 22:47:04.828 DEBUG 14912 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class com.cherso.cripto.CriptoApplication
+2021-07-11 22:47:04.821  INFO 14912 --- [restartedMain] CriptoApplication      : Starting CriptoApplication using Java 1.8.0_131 on SISTEMASP62 with PID 14912 (C:\REPO_GIT\cripto\target\classes started by cersosimof in C:\REPO_GIT\cripto)
+2021-07-11 22:47:04.828  INFO 14912 --- [restartedMain] CriptoApplication      : No active profile set, falling back to default profiles: default
+2021-07-11 22:47:04.828 DEBUG 14912 --- [restartedMain] o.s.boot.SpringApplication               : Loading source class CriptoApplication
 2021-07-11 22:47:04.942 DEBUG 14912 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:47:04.942 DEBUG 14912 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
 2021-07-11 22:47:04.942 DEBUG 14912 --- [restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-actuator/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot/(bin|build|out)/, /spring-boot-starter-[\w-]+/, /spring-boot-autoconfigure/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/]
@@ -8661,12 +8661,12 @@ Unconditional classes:
 
 
 2021-07-11 22:47:07.143 DEBUG 14912 --- [restartedMain] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-2021-07-11 22:47:07.146  INFO 14912 --- [restartedMain] com.cherso.cripto.CriptoApplication      : Started CriptoApplication in 2.817 seconds (JVM running for 4.172)
+2021-07-11 22:47:07.146  INFO 14912 --- [restartedMain] CriptoApplication      : Started CriptoApplication in 2.817 seconds (JVM running for 4.172)
 2021-07-11 22:47:07.147 DEBUG 14912 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-07-11 22:47:07.148 DEBUG 14912 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2021-07-11 22:47:07.148 DEBUG 14912 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
 2021-07-11 22:47:07.149 DEBUG 14912 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1f6a808
-2021-07-11 22:47:07.149 DEBUG 14912 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.cherso.cripto.CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
+2021-07-11 22:47:07.149 DEBUG 14912 --- [restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application CriptoApplication with URLs [file:/C:/REPO_GIT/cripto/target/classes/]
 2021-07-11 22:47:07.149  INFO 14912 --- [restartedMain] c.c.c.controllers.NewHomeController      : *** INICIO DEL LOOP ***
 2021-07-11 22:47:07.150  INFO 14912 --- [restartedMain] c.c.c.controllers.NewHomeController      : USDT;5;0.008;;
 2021-07-11 22:47:07.191 DEBUG 14912 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC

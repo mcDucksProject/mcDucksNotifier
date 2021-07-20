@@ -1,7 +1,7 @@
-package com.cherso.cripto.services;
+package com.mcDuck.Notifier.services;
 
-import com.cherso.cripto.beans.BeanContexto;
-import com.cherso.cripto.beans.BeanMoneda;
+import com.mcDuck.Notifier.beans.BeanContexto;
+import com.mcDuck.Notifier.beans.BeanMoneda;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

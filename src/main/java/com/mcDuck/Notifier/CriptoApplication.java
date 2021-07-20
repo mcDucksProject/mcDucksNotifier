@@ -1,6 +1,6 @@
-package com.cherso.cripto;
+package com.mcDuck.Notifier;
 
-import com.cherso.cripto.services.TelegramBotService;
+import com.mcDuck.Notifier.services.TelegramBotService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
